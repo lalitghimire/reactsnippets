@@ -46,8 +46,8 @@ const Country = ({ country }) => {
     return (
         <div>
             <h3>{country.data.name.common} </h3>
-            <div>capital {country.data.capital} </div>
-            <div>population {country.data.population}</div>
+            <div>Capital: {country.data.capital} </div>
+            <div>Population: {country.data.population}</div>
             <img
                 src={country.data.flags.png}
                 height='100'
@@ -68,13 +68,15 @@ const CountryHook = () => {
     };
 
     return (
-        <div>
+        <div className='country'>
+            <h2> Type a Country name </h2>
             <form onSubmit={fetch}>
                 <input {...nameInput} />
                 <button>find</button>
             </form>
-
-            <Country country={country} />
+            <div>
+                <Country country={country} />
+            </div>
         </div>
     );
 };

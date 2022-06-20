@@ -5,8 +5,11 @@ import ImageToBase64 from './pages/ImageToBase64';
 const App = () => {
     return (
         <div>
-            Hello world
+            <div className='header'>
+                <h2> Miniature Projects</h2>
+            </div>
             <CountryHook />
+            <ImageToBase64 />
         </div>
     );
 };
