@@ -6,7 +6,7 @@ import * as yup from 'yup';
 const schema = yup.object().shape({
     name: yup.string().required(),
     email: yup.string().email().required(),
-    password: yup.string().required(),
+    password: yup.string().required().min(5),
     picture: yup
         .mixed()
         .test('required', 'You need to provide a file', (value) => {
@@ -57,7 +57,13 @@ const ImageToBase64 = () => {
 
     return (
         <div className='imagetobase'>
-            <h2>Upload picture and other info </h2>
+            <h2>Upload Form Application</h2>
+            <h6>
+                {' '}
+                A react hook form application which is able to upload form data. It converts image
+                file to base64 string{' '}
+            </h6>
+            <h6> Concepts to learn: react hook form, form validation, image to base64 </h6>
             <form onSubmit={handleSubmit(handleRegistration)}>
                 <div>
                     <label>Name</label>

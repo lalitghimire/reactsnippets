@@ -69,9 +69,14 @@ const CountryHook = () => {
 
     return (
         <div className='country'>
-            <h2> Type a Country name </h2>
+            <h2> Country information </h2>
+            <h4>
+                {' '}
+                A react application which fetch country data from Api and display the information
+            </h4>
+            <h6>Concept to learn: custom hooks in react </h6>
             <form onSubmit={fetch}>
-                <input {...nameInput} />
+                <input {...nameInput} placeholder='type a country name' />
                 <button>find</button>
             </form>
             <div>
