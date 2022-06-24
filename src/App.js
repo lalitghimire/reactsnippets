@@ -2,6 +2,7 @@ import './App.css';
 import CountryHook from './pages/CountryHook';
 import ImageToBase64 from './pages/ImageToBase64';
 import SimpleForm from './pages/SimpleForm';
+import TimeTicker from './pages/TimeTicker';
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
             <SimpleForm />
             <CountryHook />
             <ImageToBase64 />
+            <TimeTicker />
         </div>
     );
 };
